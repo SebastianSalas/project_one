@@ -1,15 +1,19 @@
-<title>Home | Bootcamp Hogaru</title>
+<% provide(:title, "Home") %>
+<!DOCTYPE html>
+<html>
+<title><%= yield(:title) %> | Bootcamp Hogaru</title>
+<p>Current time: <%= Time.now.ctime %> </p>
 
-
-<h1> Hora: id="HoraActual"</h1>
+<h1> </h1>
 
 <h1>Página principal</h1>
 <div class="idc-box">
 <p class="idc-titulo">Contenidos</p>
 <ul class="idc-lista">
- <li><a href="https://proyecto-1-bootcamp-hogaru.herokuapp.com/static-pages/basics">Basics</a>
+<li><%= link_to "Basics", "static_pages/basics" %></li>
 </li>
-<li><a href="https://proyecto-1-bootcamp-hogaru.herokuapp.com/static-pages/ruby">Ruby</a></li>
-<li><a href="https://proyecto-1-bootcamp-hogaru.herokuapp.com/git">Git</a></li>
+<li><%= link_to "Ruby", "static_pages/ruby" %></li>
+<li><%= link_to "Git", "static_pages/git" %></li>
 </ul>
 </div>
+</html>
